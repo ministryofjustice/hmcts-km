@@ -1,0 +1,89 @@
+.tree {
+  margin: 0;
+  padding: 0;
+
+  &, ul {
+    list-style: none;
+  }
+
+  &.tree-no-js ul {
+    display: none;
+  }
+  &.tree-no-js .has-children.active > ul,
+  &.tree-no-js .has-children.has-active > ul {
+    display: block;
+  }
+
+  ul, li {
+    clear: left;
+  }
+
+  ul {
+    margin: 0 0 0 -1em;
+    padding: 0 0 0 0.5em;
+    border-left: 1px dotted rgba(255, 255, 255, 0.6);
+    background-color: rgba(0, 0, 0, 0.15);
+  }
+
+  li {
+    margin-left: 1.8em;
+  }
+
+  .tree-link {
+    display: block;
+    padding: 0.6em;
+  }
+
+  .active > .tree-link {
+    color: @brand-primary;
+  }
+
+  a {
+    color: @panel-dark-text;
+  }
+}
+
+.toggle-children {
+  text-decoration: none;
+  display: block;
+  float: left;
+  width: 1.8em;
+  text-align: center;
+  padding: 0.6em 0;
+  margin-left: -1.8em;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  > i {
+    transform: rotate(0deg) translateY(1px);
+    transition: transform 0.15s linear;
+    font-size: 90%;
+  }
+
+  .has-active > &,
+  .expanded > & {
+    > i {
+      transform: rotate(90deg);
+    }
+  }
+}
+/*
+.mobile-tree-nav {
+  background-color: yellow;
+}
+
+.navbar-default .navbar-collapse {
+  background-color: @bg-secondary;
+
+}
+.navbar-fixed-top .navbar-collapse {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-height: none;
+}
+*/
