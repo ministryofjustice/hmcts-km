@@ -1,0 +1,29 @@
+.comment-list {
+  &:extend(.list-unstyled all);
+}
+.comment-list ol {
+  list-style: none;
+}
+.comment-form p {
+  &:extend(.form-group all);
+}
+.comment-form input[type="text"],
+.comment-form input[type="email"],
+.comment-form input[type="url"],
+.comment-form textarea {
+  &:extend(.form-control all);
+}
+.comment-form input[type="submit"] {
+  &:extend(.btn all);
+  &:extend(.btn-primary all);
+}
+
+.comment-body {
+  background:#eee;
+  border:1px solid #ddd;
+  margin-bottom:10px;
+}
+
+#comment {
+  height: 150px;
+}

@@ -1,0 +1,22 @@
+.quick-links {
+  margin: 15px;
+  @media (min-width: @screen-md-min) {
+    margin: 15px 25px;
+  }
+
+  .quick-links-label {
+    &:extend(.btn);
+    display: block;
+    font-weight: bold;
+    text-align: left;
+    cursor: default;
+
+    @media (min-width: @screen-sm-min) {
+      display: inline-block;
+    }
+  }
+
+  i {
+    margin-right: 5px;
+  }
+}
