@@ -1,0 +1,48 @@
+.content_grid {
+  > .sidebar {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+
+    &.visible {
+      display: block;
+    }
+
+    // Increase spacing from top when the admin bar is visible
+    body.admin-bar & {
+      top: 50px + 32px;
+      @media (max-width: 782px) {
+        top: 50px + 46px;
+      }
+    }
+  }
+
+  @media (min-width: @screen-sm-min) {
+    > .sidebar {
+      display: block;
+      position: fixed;
+      top: 50px;
+      left: 0;
+      bottom: 0;
+      width: 260px;
+    }
+
+    > .main {
+      margin-left: 260px;
+    }
+  }
+
+  @media (min-width: @screen-md-min) {
+    > .sidebar {
+      width: 320px;
+    }
+
+    > .main {
+      margin-left: 320px;
+    }
+  }
+}

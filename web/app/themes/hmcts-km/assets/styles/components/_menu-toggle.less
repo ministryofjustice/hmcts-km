@@ -1,0 +1,118 @@
+@speed-multiplier: 1/2;
+@size: 50px;
+@button-color: rgba(255, 255, 255, 0.4);
+@button-hover-color: rgba(255, 255, 255, 0.5);
+@button-active-color: @brand-danger;
+@burger-color: #fff;
+@cross-color: #fff;
+
+.menu-toggle {
+  width: @size;
+  height: @size;
+  padding: 0;
+  border: 0;
+  position: relative;
+  cursor: pointer;
+  background: @button-color;
+  border-radius: 0;
+  overflow: hidden;
+
+  &:hover {
+    background: @button-hover-color;
+  }
+
+  &, * {
+    transition: (@speed-multiplier * 0.25s) ease-in-out;
+    box-sizing: border-box;
+  }
+
+  span {
+    display: block;
+    border-radius: @size * (2px/100px);
+  }
+
+  .menu-toggle__hamburger,
+  .menu-toggle__cross {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  .menu-toggle__hamburger {
+    span {
+      width: @size * (60px/100px);
+      height: @size * (4px/100px);
+      position: relative;
+      top: @size * (24px/100px);
+      left: @size * (20px/100px);
+      margin: (@size * (10px/100px)) 0;
+      background: @burger-color;
+      &:nth-child(1) {
+        transition-delay: @speed-multiplier * 0.5s;
+      }
+      &:nth-child(2) {
+        transition-delay: @speed-multiplier * 0.625s;
+      }
+      &:nth-child(3) {
+        transition-delay: @speed-multiplier * 0.75s;
+      }
+    }
+  }
+
+  .menu-toggle__cross {
+    transform: rotate(45deg);
+    span {
+      background: @cross-color;
+      &:nth-child(1) {
+        height: 0;
+        width: @size * (4px/100px);
+        position: absolute;
+        top: 10%;
+        left: @size * (48px/100px);
+        transition-delay: @speed-multiplier * 0s;
+      }
+      &:nth-child(2) {
+        width: 0;
+        height: @size * (4px/100px);
+        position: absolute;
+        left: 10%;
+        top: @size * (48px/100px);
+        transition-delay: @speed-multiplier * 0.25s;
+      }
+    }
+  }
+}
+
+.menu-toggle.open {
+  background: @button-active-color;
+  .menu-toggle__hamburger {
+    span {
+      width: 0;
+      &:nth-child(1) {
+        transition-delay: @speed-multiplier * 0s;
+      }
+      &:nth-child(2) {
+        transition-delay: @speed-multiplier * 0.125s;
+      }
+      &:nth-child(3) {
+        transition-delay: @speed-multiplier * 0.25s;
+      }
+    }
+  }
+  .menu-toggle__cross {
+    span {
+      &:nth-child(1) {
+        height: 80%;
+        transition-delay: @speed-multiplier * 0.625s;
+      }
+    }
+    span {
+      &:nth-child(2) {
+        width: 80%;
+        transition-delay: @speed-multiplier * 0.375s;
+      }
+    }
+  }
+}
