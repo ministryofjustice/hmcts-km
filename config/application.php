@@ -55,7 +55,7 @@ define('NONCE_SALT', getenv('NONCE_SALT'));
 define('AUTOMATIC_UPDATER_DISABLED', true);
 define('DISABLE_WP_CRON', true);
 define('DISALLOW_FILE_EDIT', true);
-define('WP_DEFAULT_THEME', 'imbmembers');
+define('WP_DEFAULT_THEME', 'hmcts-km');
 define('S3_UPLOADS_BASE_URL', getenv('S3_UPLOADS_BASE_URL') ? getenv('S3_UPLOADS_BASE_URL') : false);
 
 /**
