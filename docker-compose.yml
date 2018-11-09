@@ -1,5 +1,6 @@
 version: '3'
 services:
+
   wordpress:
     build: .
     volumes:
@@ -24,6 +25,7 @@ services:
       - SYS_ADMIN
     devices:
       - /dev/fuse
+
   mysql:
     image: mariadb
     environment:
@@ -33,11 +35,13 @@ services:
       MYSQL_PASSWORD: wordpress
     volumes:
       - database:/var/lib/mysql
+
   mailcatcher:
     image: schickling/mailcatcher
     environment:
       VIRTUAL_HOST: mail.${SERVER_NAME}
       VIRTUAL_PORT: 1080
+
 volumes:
   database:
     driver: local
