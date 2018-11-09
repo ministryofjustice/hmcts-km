@@ -15,6 +15,7 @@ deep-clean:
 
 # Run the application
 run:
+	dory up
 	docker-compose up
 
 # Open a bash shell on the running container
@@ -24,3 +25,7 @@ bash:
 # Run tests
 test:
 	composer test
+
+down:
+	dory down
+	docker-compose down
