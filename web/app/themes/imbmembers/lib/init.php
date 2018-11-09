@@ -3,7 +3,6 @@
 namespace Roots\Sage\Init;
 
 use Roots\Sage\Assets;
-use Roots\Sage\Users\UserRoles;
 
 /**
  * Theme setup
@@ -42,7 +41,4 @@ function setup()
 }
 add_action('after_setup_theme', __NAMESPACE__ . '\\setup');
 
-/**
- * Define user roles
- */
-new UserRoles();
+
