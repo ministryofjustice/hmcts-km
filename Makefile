@@ -29,3 +29,6 @@ test:
 down:
 	dory down
 	docker-compose down
+
+nuke-all:
+	docker-compose -f docker-compose.yml down --rmi all
