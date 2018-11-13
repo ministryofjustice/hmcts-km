@@ -4,7 +4,7 @@ default:
       contexts:
         # Keep WordpressContext first!
         - PaulGibbs\WordpressBehatExtension\Context\WordpressContext
-        - ImbMembers\Features\Context\FeatureContext
+        - HmctsKm\Features\Context\FeatureContext
         - Behat\MinkExtension\Context\MinkContext
         - PaulGibbs\WordpressBehatExtension\Context\ContentContext
         - PaulGibbs\WordpressBehatExtension\Context\DashboardContext
@@ -18,7 +18,7 @@ default:
     DMore\ChromeExtension\Behat\ServiceContainer\ChromeExtension: ~
 
     Behat\MinkExtension:
-      base_url: http://imbmembers.docker
+      base_url: http://hmctskm.docker
       browser_name: chrome
       default_session: default
       javascript_session: chrome
@@ -33,7 +33,7 @@ default:
 
     PaulGibbs\WordpressBehatExtension:
       default_driver: wpcli
-      site_url: http://imbmembers.docker/wp
+      site_url: http://hmctskm.docker/wp
       path: web/wp
       users:
         admin:

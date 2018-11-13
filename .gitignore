@@ -25,10 +25,10 @@ vendor/*
 !vendor/.gitkeep
 
 # Theme
-web/app/themes/imbmembers/dist
-web/app/themes/imbmembers/bower_components
-web/app/themes/imbmembers/node_modules
-web/app/themes/imbmembers/npm-debug.log
+web/app/themes/hmcts-km/dist
+web/app/themes/hmcts-km/bower_components
+web/app/themes/hmcts-km/node_modules
+web/app/themes/hmcts-km/npm-debug.log
 
 # Database dumps
 *.sql

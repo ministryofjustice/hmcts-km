@@ -61,7 +61,7 @@ function field_error_class($name)
         </header>
         <div class="entry-content">
             <div class="well">
-                <p>Change the password you use to log in to your IMB Members account.</p>
+                <p>Change the password you use to log in to your HMCTS KM account.</p>
 
                 <form action="<?= esc_url(get_the_permalink()) ?>" method="post" class="form-horizontal change-password-form">
                     <?php

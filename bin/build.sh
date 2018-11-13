@@ -11,7 +11,7 @@ set -e
 composer install
 
 # Build theme assets
-cd web/app/themes/imbmembers
+cd web/app/themes/hmcts-km
 npm install && bower install
 gulp --production
 

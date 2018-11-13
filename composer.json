@@ -80,7 +80,7 @@
   },
   "autoload": {
     "psr-4": {
-      "ImbMembers\\Features\\": "features/src/"
+      "HmctsKm\\Features\\": "features/src/"
     }
   }
 }
