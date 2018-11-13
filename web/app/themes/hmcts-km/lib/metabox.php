@@ -42,6 +42,7 @@ class Custom_Meta_Box {
   public function display($post){
 
     $values = get_post_custom( $post->ID );
+    $text = '';
     if (isset( $values['meta_box_text'] )){
       $text = $values['meta_box_text'][0];
     }
