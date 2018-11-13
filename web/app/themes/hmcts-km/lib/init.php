@@ -42,7 +42,4 @@ function setup()
 }
 add_action('after_setup_theme', __NAMESPACE__ . '\\setup');
 
-/**
- * Define user roles
- */
-new UserRoles();
+
