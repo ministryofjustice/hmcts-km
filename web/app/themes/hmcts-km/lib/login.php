@@ -119,7 +119,8 @@ function require_login()
         exit();
     }
 }
-add_action('init', __NAMESPACE__ . '\\require_login');
+// 14.11.18 - Disabled login screen required to view site homepage. I've kept this incase we want to implement in the future.
+//add_action('init', __NAMESPACE__ . '\\require_login');
 
 /**
  * Should the user be authenticated to see this page?
