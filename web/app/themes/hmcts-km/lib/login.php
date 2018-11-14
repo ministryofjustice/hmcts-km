@@ -98,11 +98,11 @@ function login_header_link()
 {
     return home_url();
 }
-add_filter('login_headerurl', __NAMESPACE__ . '\\login_header_link');
+#add_filter('login_headerurl', __NAMESPACE__ . '\\login_header_link');
 
 function login_header_link_title()
 {
-    return '';
+    return 'HMCTS Knowledge Management CMS';
 }
 add_filter('login_headertitle', __NAMESPACE__ . '\\login_header_link_title');
 
