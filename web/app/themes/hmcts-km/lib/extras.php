@@ -131,7 +131,7 @@ function nicer_archive_title($title)
         $title = get_the_date(_x('Y', 'yearly archives date format'));
     }
 
-    return 'News from ' . $title;
+    return 'All articles in ' . strtolower($title);
 }
 add_filter('get_the_archive_title', __NAMESPACE__ . '\\nicer_archive_title');
 
