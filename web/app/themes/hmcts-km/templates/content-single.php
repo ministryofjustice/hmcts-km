@@ -15,7 +15,7 @@ if ( isset( $values['meta_box_text'] ) ) {
 			<?php the_content(); ?>
 		</div>
 		<div class="entry-content">
-			<?php echo $text[0]; ?>
+			<?php $text; ?>
 		</div>
 		<footer>
 			<?php
