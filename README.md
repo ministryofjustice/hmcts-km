@@ -39,7 +39,7 @@ Anonymous users cannot view the website – users must login before seeing conte
     cp .env.example .env
     ```
 
-    The `SERVER_NAME` variable should be `hmcts-km.docker`. The website will be accessible at http://hmcts-km.docker when run using `docker-compose` and `dory`.
+    The `SERVER_NAME` variable should be `hmctskm.docker`. The website will be accessible at http://hmctskm.docker when run using `docker-compose` and `dory`.
 
     Generate keys and salts to replace the dummy values.
 
@@ -65,7 +65,7 @@ Anonymous users cannot view the website – users must login before seeing conte
     make run
     ```
 
-6. Once the docker image has built and is running, you should be able to access the running container by going to http://hmcts-km.docker.
+6. Once the docker image has built and is running, you should be able to access the running container by going to http://hmctskm.docker.
 
     You will need to run through the WordPress installation wizard in your browser.
 
@@ -191,7 +191,7 @@ To use WP-CLI, your docker container must already be running. (This will probabl
 
 When running locally for development, emails sent by WordPress are not delivered. Instead they are captured by [mailcatcher](https://mailcatcher.me/).
 
-To see emails, go to http://mail.hmcts-km.docker.
+To see emails, go to http://mail.hmctskm.docker.
 
 This will load a webmail-like interface and display all emails that WordPress has sent.
 
