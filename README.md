@@ -23,6 +23,7 @@ Anonymous users cannot view the website – users must login before seeing conte
   - node 10 – known to work on node v10.4.1 (npm v6.1.0)
   - bower
   - gulp
+- Add `mail.hmctskm.docker` and `hmctskm.docker` to your hosts file. `sudo vim /private/etc/hosts`
 
 ## Getting Started
 
