@@ -12,7 +12,7 @@ Feature: The WordPress dashboard is only accessible to admins
     Given I am logged in as a subscriber
     When I go to "/wp-admin/"
     Then the URL should match "^/$"
-    And I should see "Latest News"
+    And I should see "Knowledge articles"
     And I should not see "Dashboard"
 
   Scenario: Admins should see the admin toolbar on the frontend
