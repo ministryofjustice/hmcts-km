@@ -3,7 +3,7 @@
 alias wp="wp --allow-root"
 
 wp db reset --yes
-wp core install --url=imbmembers.docker --title="IMB Members" --admin_user=admin --admin_password=password --admin_email=admin@example.com --skip-email
+wp core install --url=hmctskm.docker --title="HMCTS KM" --admin_user=admin --admin_password=password --admin_email=admin@example.com --skip-email
 wp user create subscriber subscriber@example.com --role=subscriber --user_pass=password
 wp option update timezone_string "Europe/London"
 wp rewrite structure "/%year%/%monthnum%/%postname%/"

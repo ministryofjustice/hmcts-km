@@ -1,6 +1,6 @@
 <?php
 
-namespace ImbMembers\Features\Context;
+namespace HmctsKm\Features\Context;
 
 use Behat\Behat\Context\Context;
 use Behat\Mink\Exception\DriverException;
