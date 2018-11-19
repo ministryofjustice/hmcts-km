@@ -21,6 +21,8 @@ $user = wp_get_current_user();
                     <span></span>
                 </div>
             </button>
+
+            <img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/moj_logo.png" alt="">
             <a class="navbar-brand" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
         </div>
 
