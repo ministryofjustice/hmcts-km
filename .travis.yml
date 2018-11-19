@@ -18,7 +18,7 @@ before_install:
   - cd ../../../..
 
 install:
-  - docker-compose up
+  - docker-compose -f docker-compose.yml
   - docker-compose exec wordpress features/seed-database.sh
 
 script:
