@@ -13,8 +13,7 @@ before_install:
   - cd web/app/themes/hmcts-km
   - npm install
   - npm install -g bower
-  - gulp -v
-  - gulp build
+  - npm install -g gulp
   - rm -Rf node_modules bower_components
   - cd ../../../..
 
