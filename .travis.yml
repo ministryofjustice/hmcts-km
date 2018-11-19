@@ -9,9 +9,9 @@ services:
   - docker
 
 before_install:
-  - npm install -g grunt-cli bower
-  - bower install
   - make build
+
+install:
   - make run
   - docker-compose exec wordpress features/seed-database.sh
 
