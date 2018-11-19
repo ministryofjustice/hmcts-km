@@ -1,7 +1,30 @@
+header{
+  .container{
+    background: @bg-primary;
+    max-width: 990px;
+    margin: 0 auto;
+    padding: 8px 15px;
+
+    img.logo{
+      height: 2.8rem;
+      float: left;
+    }
+
+    .navbar-brand{
+      color: #fff;
+      font-size: 26px;
+      font-weight: 700;
+      padding: 5px 0 5px 15px;
+
+    }
+
+  }
+}
+
 .banner {
   background: @bg-primary;
   border: none;
-  padding: 10px 15px;
+  padding: 0;
   border-bottom: 10px solid #005ea5;
   color: #fff;
 }
@@ -20,7 +43,7 @@
       width: 260px;
   }
   @media (min-width: @screen-md-min) {
-      width: 320px;
+      width: auto;
   }
 }
 
