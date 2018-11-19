@@ -9,7 +9,13 @@ services:
   - docker
 
 before_install:
-  - make build
+  - composer install
+  - cd web/app/themes/hmcts-km
+  - npm install
+  - npm install -g bower
+  - gulp --production
+  - rm -Rf node_modules bower_components
+  - cd ../../../..
 
 install:
   - make run
