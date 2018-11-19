@@ -20,6 +20,13 @@ function editor_set_capabilities() {
 		'edit_posts',
 		'publish_posts',
 		'publish_pages',
+		'delete_users',
+		'create_users',
+		'edit_users',
+		'remove_users',
+		'add_users',
+		'promote_users',
+		'list_users',
 	);
 
 	foreach ( $caps as $cap ) {
