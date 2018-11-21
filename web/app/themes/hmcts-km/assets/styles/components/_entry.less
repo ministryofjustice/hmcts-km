@@ -31,12 +31,50 @@
     margin: 0 0 1em 0;
   }
 
+  h1, h2, h3, h4 {
+    font-family: 700;
+  }
+
   .entry-content {
     margin-top: 2em;
     img {
       max-width: 100%;
       height: auto;
     }
+
+    .app-contact-panel{
+      padding: 15px;
+
+      a {
+        color: @text-link;
+        text-decoration: underline;;
+      }
+
+      h1, h2, h3, h4 {
+        margin-top: 0;
+      }
+
+      &.public{
+        border: 1px solid #bfc1c3;
+        padding: 15px;
+        color: black;
+      }
+
+      &.private{
+        background: white;
+        padding: 0;
+      }
+
+      &.welsh{
+        border-left: 5px solid #bfc1c3;
+        a {
+          color: darken(@text-link, 50%);
+        }
+      }
+
+
+    }
+
   }
 
   .entry-thumbnail {
