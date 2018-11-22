@@ -29,15 +29,15 @@
 			<?php
 			if(!empty($public_text)){
 				echo '<div class="app-contact-panel public">';
-				echo '<h1>Advice for your customer</h1>';
-				echo '<p>' . $public_text . '</p>';
+					echo '<h1>Advice for your customer</h1>';
+					echo '<p>' . $public_text . '</p>';
 
-					if(!empty($welsh_text)){
-						echo '<a type="button" data-toggle="collapse" data-target="#welsh" id="hidden_panel">View this in Welsh</a>';
-						echo '<div id="welsh" class="collapse app-contact-panel welsh">';
-						echo '<p>' . $welsh_text . '</p>';
-						echo '</div>';
-					}
+				if(!empty($welsh_text)){
+					echo '<a data-toggle="collapse" data-target="#welsh" class="btn-hidden_panel" >View this in Welsh</a>';
+					echo '<div id="welsh" class="collapse app-contact-panel welsh">';
+						echo $welsh_text ;
+					echo '</div>';
+				}
 
 				echo '</div>';
 			}
