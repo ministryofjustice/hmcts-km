@@ -55,7 +55,12 @@ class Custom_Welsh_Meta_Box {
       $public_text = '';
     }
 
-    wp_editor( $public_text, '_welsh_editor' );
+    $settings = array (
+      'wpautop' => false,
+      'media_buttons' => false,
+    );
+
+    wp_editor( $public_text, '_welsh_editor', $settings );
 
   }
 

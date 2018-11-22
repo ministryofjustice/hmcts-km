@@ -10,6 +10,7 @@
 
   .entry-title {
     margin-top: 0;
+    font-weight: 700;
     a {
       text-decoration: underline;
       color: @text-link;
@@ -31,10 +32,6 @@
     margin: 0 0 1em 0;
   }
 
-  h1, h2, h3, h4 {
-    font-family: 700;
-  }
-
   .entry-content {
     margin-top: 2em;
     img {
@@ -52,12 +49,57 @@
 
       h1, h2, h3, h4 {
         margin-top: 0;
+        font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+        font-weight: 700;
       }
 
       &.public{
         border: 1px solid #bfc1c3;
         padding: 15px;
         color: black;
+
+        a.btn-hidden_panel{
+          display: inline-block;
+          color: #005ea5;
+          cursor: pointer;
+          position: relative;
+          padding-left: 25px;
+          margin-bottom: 10px;
+
+          &.open {
+            &::before {
+              display: block;
+              width: 0;
+              height: 0;
+              border-style: solid;
+              border-color: transparent;
+              -webkit-clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+              clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+              border-width: 12.124px 7px 0 7px;
+              border-top-color: inherit;
+            }
+          }
+
+          &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            display: block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-color: transparent;
+            -webkit-clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+            clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+            border-width: 7px 0 7px 12.124px;
+            border-left-color: inherit;
+          }
+
+        }
+
       }
 
       &.private{
@@ -69,7 +111,10 @@
         border-left: 5px solid #bfc1c3;
         a {
           color: darken(@text-link, 50%);
+
         }
+
+
       }
 
 
