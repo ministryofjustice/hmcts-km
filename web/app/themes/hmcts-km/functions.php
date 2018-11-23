@@ -30,6 +30,7 @@ $sage_includes = [
 	'lib/welsh-metabox.php',               // Extra Metabox
 	'lib/users/author.php',              // Custom User Role Settings
 	'lib/users/editor.php',              // Custom User Role Settings
+	'lib/emails.php', // Restricts certain email domain registration
 ];
 
 foreach ( $sage_includes as $file ) {
