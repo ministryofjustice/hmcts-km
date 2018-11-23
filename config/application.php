@@ -66,7 +66,7 @@ header('x-xss-protection: 1; mode=block');
 header('X-Content-Type-Options: nosniff');
 header('access-control-allow-origin: *');
 header('access-control-allow-credentials: true');
-header('strict-transport-security: max-age=480; includeSubDomains');
+header('strict-transport-security: max-age=63113904; includeSubDomains');
 
 /**
  * Bootstrap WordPress
