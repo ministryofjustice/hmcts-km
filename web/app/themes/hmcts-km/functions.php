@@ -29,7 +29,8 @@ $sage_includes = [
 	'lib/public-metabox.php',               // Extra Metabox
 	'lib/welsh-metabox.php',               // Extra Metabox
 	'lib/users/author.php',              // Custom User Role Settings
-	'lib/users/editor.php',              // Custom User Role Settings
+  'lib/users/editor.php',              // Custom User Role Settings
+  'lib/security.php'
 ];
 
 foreach ( $sage_includes as $file ) {
