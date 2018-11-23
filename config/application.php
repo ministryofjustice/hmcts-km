@@ -59,6 +59,16 @@ define('WP_DEFAULT_THEME', 'hmcts-km');
 define('S3_UPLOADS_BASE_URL', getenv('S3_UPLOADS_BASE_URL') ? getenv('S3_UPLOADS_BASE_URL') : false);
 
 /**
+ * Header Settings
+ */
+header('X-Frame-Options: SAMEORIGIN');
+header('x-xss-protection: 1; mode=block');
+header('X-Content-Type-Options: nosniff');
+header('access-control-allow-origin: *');
+header('access-control-allow-credentials: true');
+header('strict-transport-security: max-age=63113904; includeSubDomains');
+
+/**
  * Bootstrap WordPress
  */
 if (!defined('ABSPATH')) {
