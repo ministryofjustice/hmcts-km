@@ -26,11 +26,13 @@ $sage_includes = [
 	'lib/taxonomies.php',            // Configure post taxonomies
 	'lib/login.php',                 // Changes to login functionality
 	'lib/change-password.php',       // Frontend 'change password' functionality
-	'lib/public-metabox.php',               // Extra Metabox
-	'lib/welsh-metabox.php',               // Extra Metabox
-	'lib/users/author.php',              // Custom User Role Settings
-  'lib/users/editor.php',              // Custom User Role Settings
+	'lib/public-metabox.php',        // Extra Metabox
+	'lib/welsh-metabox.php',         // Extra Metabox
+	'lib/users/author.php',          // Custom User Role Settings
+	'lib/users/editor.php',          // Custom User Role Settings
+	'lib/emails.php',                // Restricts certain email domain registration
   'lib/security.php'
+
 ];
 
 foreach ( $sage_includes as $file ) {
