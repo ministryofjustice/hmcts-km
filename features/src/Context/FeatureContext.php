@@ -83,4 +83,55 @@ class FeatureContext extends RawWordpressContext implements Context
             $this->getSession()->getDriver()
         );
     }
+
+
+    /**
+ * @When I click on a knowledge article title
+ */
+    public function iClickOnAKnowledgeArticleTitle()
+    {
+      try {
+        $this->kjlkjlk();
+      } catch (DriverException $e) {
+        // Expection fulfilled
+        return;
+      }
+
+      throw new ExpectationException(
+        'The knowlege article is not there, but it shouldn\'t be.',
+        $this->getSession()->getDriver()
+      );
+    }
+
+  /**
+   * @When I enter a search term
+   */
+    public function iEnterASearchTerm()
+    {
+        throw new PendingException();
+    }
+
+  /**
+   * @Then the search results load
+   */
+    public function theSearchResultsLoad()
+    {
+        throw new PendingException();
+    }
+
+  /**
+   * @When I click on a tag
+   */
+    public function iClickOnATag()
+    {
+        throw new PendingException();
+    }
+
+  /**
+   * @Then the tag search results load
+   */
+    public function theTagSearchResultsLoad()
+    {
+        throw new PendingException();
+    }
 }

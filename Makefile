@@ -26,6 +26,9 @@ bash:
 test:
 	composer test
 
+behat:
+	vendor/bin/behat
+
 down:
 	dory down
 	docker-compose down
