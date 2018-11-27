@@ -16,14 +16,19 @@
       ];
 
       if( jQuery.inArray(domain, whitelist) != '-1'){
+
         submit_button.attr('disabled', false);
-        console.log(domain +' is valid');
+        $('.error').remove();
+        return false;
+
       }else{
-        console.log( domain + ' nope!! is not valid');
+
         submit_button.attr('disabled', true);
         $('.wrap').prepend('<div class="error"><p><strong>ERROR</strong>: Not a valid email address</p></div>');
-        console.log(domain + ' is not valid');
+        return false;
+        
       }
+
     });
 
   });
