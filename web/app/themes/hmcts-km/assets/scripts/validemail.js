@@ -24,9 +24,10 @@
       }else{
 
         submit_button.attr('disabled', true);
+        $('.error').remove();
         $('.wrap').prepend('<div class="error"><p><strong>ERROR</strong>: Not a valid email address</p></div>');
         return false;
-        
+
       }
 
     });
