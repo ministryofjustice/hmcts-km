@@ -1,19 +1,19 @@
 Feature: Check the major homepage elements exist
   In order to have a consistent homepage interface
-  As a HMCTS staff member
+  As a HMCTS staff member (not logged in)
   I can see the homepage and everything is there I expect
 
-  Scenario: Staff member can see homepage post
+  Scenario: I can see homepage knowlege articles/posts
     Given I go to the homepage
     When I should see "Hello world!"
-    Then the URL should match "^/$"
+    And I should see "Knowledge article post"
 
-  Scenario: Staff member can search
+  Scenario: I can use the search
     Given I go to the homepage
     When I enter a search term
     Then the search results load
 
-  Scenario: Staff member can see tags
+  Scenario: I can see tags
     Given I go to the homepage
     When I click on a tag
     Then the tag search results load
