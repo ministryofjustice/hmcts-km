@@ -5,7 +5,7 @@ Feature: Check the major homepage elements exist
 
   Scenario: I can see homepage knowlege articles/posts
     Given I go to the homepage
-    When I should see "Hello world!"
+    #When I should see "Hello world!"
     And I should see "Knowledge article post"
 
     #Scenario: I can use the search

@@ -8,6 +8,9 @@ php:
 services:
   - docker
 
+git:
+  depth: false
+
 before_install:
   - composer install
   - cd web/app/themes/hmcts-km
