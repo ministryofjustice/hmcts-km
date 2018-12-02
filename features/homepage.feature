@@ -8,12 +8,12 @@ Feature: Check the major homepage elements exist
     When I should see "Hello world!"
     And I should see "Knowledge article post"
 
-  Scenario: I can use the search
-    Given I go to the homepage
-    When I enter a search term
-    Then the search results load
+    #Scenario: I can use the search
+    #Given I go to the homepage
+    #When I enter a search term
+    #Then the search results load
 
-  Scenario: I can see tags
-    Given I go to the homepage
-    When I click on a tag
-    Then the tag search results load
+    #Scenario: I can see tags
+    #Given I go to the homepage
+    #When I click on a tag
+    #Then the tag search results load
