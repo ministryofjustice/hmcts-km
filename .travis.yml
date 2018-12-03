@@ -24,7 +24,8 @@ install:
   - docker-compose -f docker-compose-travis.yml up -d
   - gem install dory
   - dory up
-    #docker-compose -f docker-compose-travis.yml exec wordpress features/seed-database.sh -d
+  - dory status
+  - docker-compose -f docker-compose-travis.yml exec wordpress features/seed-database.sh -d
 
 script:
   - curl -i "http://hmctskm.docker/wp/wp-login.php"
