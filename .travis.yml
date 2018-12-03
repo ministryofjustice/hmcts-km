@@ -21,9 +21,10 @@ before_install:
   - cd ../../../..
 
 install:
+  - docker-compose -f docker-compose-travis.yml up -d
   - gem install dory
   - dory up
-  - docker-compose -f docker-compose-travis.yml up -d
+  - curl -L0 "http://hmctskm.docker"
   - docker-compose -f docker-compose-travis.yml exec wordpress features/seed-database.sh -d
 
 script:
