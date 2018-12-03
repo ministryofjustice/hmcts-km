@@ -21,14 +21,12 @@ before_install:
   - cd ../../../..
 
 install:
-  - docker-compose -f docker-compose-travis.yml up -d
   - gem install dory
   - dory up
-  - curl -L0 "http://hmctskm.docker"
   - docker-compose -f docker-compose-travis.yml exec wordpress features/seed-database.sh -d
 
 script:
-  - curl -L0 "http://hmctskm.docker"
+  - curl -i "http://hmctskm.docker/wp/wp-login.php"
   - vendor/bin/behat
 
 notifications:
