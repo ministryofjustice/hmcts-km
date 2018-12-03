@@ -27,6 +27,7 @@ install:
   - docker-compose -f docker-compose-travis.yml exec wordpress features/seed-database.sh -d
 
 script:
+  - curl -L0 "http://hmctskm.docker"
   - vendor/bin/behat
 
 notifications:
