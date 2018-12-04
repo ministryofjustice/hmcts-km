@@ -11,6 +11,10 @@ services:
 git:
   depth: false
 
+dist: trusty
+addons:
+  chrome: stable
+ ⋮
 before_install:
   - composer install
   - cd web/app/themes/hmcts-km
@@ -19,6 +23,7 @@ before_install:
   - npm install -g gulp
   - rm -Rf node_modules bower_components
   - cd ../../../..
+  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
 
 install:
   - docker-compose -f docker-compose-travis.yml up -d
@@ -28,8 +33,6 @@ install:
   - docker-compose -f docker-compose-travis.yml exec wordpress features/seed-database.sh -d
 
 script:
-  - curl -i "http://hmctskm.docker/wp/wp-login.php"
-  - curl -i "http://hmctskm.docker"
   - vendor/bin/behat
 
 notifications:
