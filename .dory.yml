@@ -30,5 +30,5 @@ dory:
     ssl_certs_dir: ''  # leave as empty string to use default certs
   resolv:
     enabled: true
-    nameserver: hmctskm.docker
+    nameserver: 127.0.0.1
     port: 53  # port where the nameserver listens. On linux it must be 53

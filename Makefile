@@ -4,6 +4,9 @@ default: build
 build:
 	bin/build.sh
 
+travis:
+	bin/dory.sh
+
 # Remove ignored git files – e.g. composer dependencies and built theme assets
 # But keep .env file, .idea directory (PhpStorm config), and uploaded media files
 clean:
