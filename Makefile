@@ -15,8 +15,8 @@ deep-clean:
 
 # Run the application
 run:
-	dory up
-	docker-compose up
+	dory up -v
+	docker-compose up -d
 
 # Open a bash shell on the running container
 bash:

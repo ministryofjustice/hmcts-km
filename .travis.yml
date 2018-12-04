@@ -11,6 +11,10 @@ services:
 git:
   depth: false
 
+addons:
+  hosts:
+    - hmctskm.docker
+
 before_install:
   - composer install
   - cd web/app/themes/hmcts-km
@@ -23,8 +27,8 @@ before_install:
 install:
   - docker-compose -f docker-compose-travis.yml up -d
   - gem install dory
-  - dory up
-  - dory status
+  - dory up --version
+  - dory status --version
   - docker-compose -f docker-compose-travis.yml exec wordpress features/seed-database.sh -d
 
 script:
