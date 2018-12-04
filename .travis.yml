@@ -12,6 +12,7 @@ git:
   depth: false
 
 dist: trusty
+
 addons:
   chrome: stable
  ⋮
