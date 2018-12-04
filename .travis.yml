@@ -27,8 +27,8 @@ before_install:
 install:
   - docker-compose -f docker-compose-travis.yml up -d
   - gem install dory
-  - dory up --version
-  - dory status --version
+  - dory up
+  - dory status
   - docker-compose -f docker-compose-travis.yml exec wordpress features/seed-database.sh -d
 
 script:
