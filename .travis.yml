@@ -19,6 +19,7 @@ before_install:
 
 install:
   - docker-compose -f docker-compose-travis.yml up -d
+  - dory up
   - docker-compose exec wordpress features/seed-database.sh
 
 script:
