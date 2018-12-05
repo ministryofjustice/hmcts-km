@@ -41,7 +41,10 @@
 
 				echo '</div>';
 			}
-			?>
+?>
+<br />
+<hr>
+Article tagged as: <?php the_category(', '); ?>
 		</div>
 
 		<footer>
