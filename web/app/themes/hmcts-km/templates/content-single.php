@@ -39,10 +39,13 @@ if (!empty($public_value) || !empty($welsh_value)) {
                     echo '</div>';
                 }
 
-                echo '</div>';
-            }
-            ?>
-        </div>
+				echo '</div>';
+			}
+?>
+<br />
+<hr>
+Article tagged as: <?php the_category(', '); ?>
+      </div>
 
         <footer>
             <?php
