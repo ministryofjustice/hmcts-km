@@ -1,6 +1,6 @@
 Feature: The WordPress dashboard is only accessible to admins
   In order to maintain a consistent user interface
-  As a subscriber (IMB Member)
+  As a subscriber (HMCTS Staff editor)
   I cannot access the WordPress dashboard
 
   Scenario: Admins can access wp-admin
