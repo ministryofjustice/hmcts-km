@@ -21,5 +21,5 @@
         <?php the_excerpt(); ?>
     </div>
   </div>
- <?php the_category(', '); ?>
+    <?php the_category(', '); ?>
 </article>

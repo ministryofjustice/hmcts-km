@@ -41,5 +41,3 @@ function setup()
     add_editor_style(Assets\asset_path('styles/editor-style.css'));
 }
 add_action('after_setup_theme', __NAMESPACE__ . '\\setup');
-
-

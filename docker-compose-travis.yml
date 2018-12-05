@@ -29,6 +29,7 @@ services:
       MYSQL_DATABASE: wordpress
       MYSQL_USER: wordpress
       MYSQL_PASSWORD: wordpress
+      VIRTUAL_HOST: ${SERVER_NAME}
     volumes:
       - database:/var/lib/mysql
 

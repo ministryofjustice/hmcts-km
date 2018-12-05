@@ -83,4 +83,37 @@ class FeatureContext extends RawWordpressContext implements Context
             $this->getSession()->getDriver()
         );
     }
-}
+
+    /**
+     * @When I enter a search term
+     */
+    public function iEnterASearchTerm()
+    {
+        throw new PendingException();
+    }
+
+    /**
+     * @Then the search results load
+     */
+    public function theSearchResultsLoad()
+    {
+        throw new PendingException();
+    }
+
+    /**
+     * @When I click on a tag
+     */
+    public function iClickOnATag()
+    {
+        throw new PendingException();
+    }
+
+    /**
+     * @Then the tag search results load
+     */
+    public function theTagSearchResultsLoad()
+    {
+        throw new PendingException();
+    }
+
+  }

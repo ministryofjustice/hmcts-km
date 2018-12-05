@@ -8,6 +8,13 @@ php:
 services:
   - docker
 
+git:
+  depth: false
+
+addons:
+  hosts:
+    - hmctskm.docker
+
 before_install:
   - composer install
   - cd web/app/themes/hmcts-km
@@ -19,7 +26,11 @@ before_install:
 
 install:
   - docker-compose -f docker-compose-travis.yml up -d
-  - docker-compose exec wordpress features/seed-database.sh
+  - gem install dory
+  - make travis
+  - dory up
+  - dory status
+  - docker-compose -f docker-compose-travis.yml exec wordpress features/seed-database.sh -d
 
 script:
   - vendor/bin/behat
