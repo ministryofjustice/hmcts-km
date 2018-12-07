@@ -2,7 +2,7 @@ header{
   .container{
     background: @bg-primary;
     margin: 0 auto;
-    padding: 8px 15px;
+    padding: 0 15px;
 
     .navbar-header {
       margin-top: 9px;
@@ -37,6 +37,14 @@ header{
 .navbar-form {
   border: 0;
   box-shadow: none;
+
+  .input-group label {
+    font-weight: 400;
+  }
+
+  .input-group-btn {
+    vertical-align: top;
+  }
 }
 
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
