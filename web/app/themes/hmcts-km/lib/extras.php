@@ -121,6 +121,7 @@ function show_all_posts($query)
 }
 add_action('pre_get_posts', __NAMESPACE__ . '\\show_all_posts');
 
+
 function nicer_archive_title($title)
 {
     if (is_month()) {
