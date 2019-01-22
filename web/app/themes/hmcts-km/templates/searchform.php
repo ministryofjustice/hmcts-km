@@ -2,15 +2,12 @@
 
   <label class="sr-only"><?php _e( 'Search for:', 'sage' ); ?></label>
 
-  <div class="input-group mb-3">
+  <div class="input-group">
 
 	<input type="search" value="<?php echo get_search_query(); ?>" name="s" class="search-field form-control" placeholder="<?php _e( 'Search by keyword', 'sage' ); ?>">
 
-  </div>
-
-	<div class="input-group-append">
+    <div class="input-group-dropdown">
 		<?php
-
 		wp_dropdown_categories(
 			[
 				'show_option_all' => 'Pages and articles',
@@ -24,13 +21,13 @@
 				'value_field'     => 'term_id',
 			]
 		);
-
 		?>
-	Or search by selecting a specific category.
-	</div>
+	  Or search by selecting a specific category.
+    </div>
 
-  <div class="input-group-prepend">
-	<button type="submit" class="search-submit btn btn-default"><?php _e( 'Search', 'sage' ); ?></button>
+	<span class="input-group-btn">
+	  <button type="submit" class="search-submit btn btn-default"><?php _e( 'Search', 'sage' ); ?></button>
+	</span>
+
   </div>
-
 </form>
