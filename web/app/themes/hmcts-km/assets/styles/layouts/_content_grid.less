@@ -3,7 +3,7 @@
   > .sidebar {
     display: none;
     position: absolute;
-    top: 167px;
+    top: 118px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -13,9 +13,10 @@
       display: block;
     }
 
-    // Increase spacing from top when the admin bar is visible
+    // When logged in - increase spacing from top when the admin bar is visible
     body.admin-bar & {
-      top: 167px;
+      top: 118px;
+      padding-top: 0;
       @media (max-width: 782px) {
         top: 167px;
       }
@@ -36,7 +37,7 @@
 
     > .main {
       margin-left: 260px;
-      margin-top: 75px;
+      margin-top: 91px;
     }
   }
 

@@ -28,13 +28,22 @@ body {
 }
 
 .input-group {
-  width: 560px;
+  max-width: @content-max-width;
 }
 
-.input-group-append {
-  margin: 8px 0;
+.input-group-addon, .input-group-btn {
+  vertical-align: top;
 }
 
 .dropdown-menu {
   margin-top:8px;
+}
+
+.btn, .quick-links .quick-links-label {
+  margin-bottom: 8px;
+}
+
+.navbar-form .input-group-dropdown {
+    vertical-align: top;
+    max-width: 100%;
 }
