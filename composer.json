@@ -44,11 +44,12 @@
     "php": ">=5.4",
     "composer/installers": "~1.0.12",
     "vlucas/phpdotenv": "~1.0.9",
-    "johnpbloch/wordpress": "*",
+    "johnpbloch/wordpress": "4.9.9",
     "koodimonni-language/core-en_gb": "*",
     "roots/soil": "3.0.3",
     "wpackagist-plugin/wp-nested-pages": "*",
     "wpackagist-plugin/breadcrumb-trail": "*",
+    "wpackagist-plugin/classic-editor":"1.3",
     "ministryofjustice/wp-rewrite-media-to-s3": "^0.1.0",
     "wpackagist-plugin/menu-icons": "*",
     "wpackagist-plugin/google-analytics-dashboard-for-wp": "*"
