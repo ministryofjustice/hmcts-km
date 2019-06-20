@@ -41,16 +41,6 @@ function custom_upload_mimes ( $existing_mimes=array() ) {
     $existing_mimes['msg'] = 'application/vnd.ms-outlook';
     return $existing_mimes;
 }
-// Set documents uploaded via WP Document Revisions to be public by default
-add_filter( 'document_to_private', 'dont_make_private', 10, 2);
-function dont_make_private($post, $post_pre ){
-	return $post_pre;
-}
-add_filter('media_row_actions','hide_media_view_link', 10, 2);
-function hide_media_view_link($actions, $post){
-    unset($actions['view']);
-    return $actions;
-}
 add_filter( 'wp_check_filetype_and_ext', 'moj_disable_real_mime_check', 10, 4 );
 //Disable the real mime check to avoid conflicts with mimetypes reported by PHP and extension
 function moj_disable_real_mime_check( $data, $file, $filename, $mimes ) {
