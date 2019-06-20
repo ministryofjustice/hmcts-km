@@ -32,7 +32,8 @@ $sage_includes = [
 	'lib/users/author.php',          // Custom User Role Settings
 	'lib/users/editor.php',          // Custom User Role Settings
 	'lib/emails.php',                // Restricts certain email domain registration
-  'lib/security.php'
+  'lib/uploads.php',               // Added to extend allowed file types in Media upload
+	'lib/security.php'
 
 ];
 
