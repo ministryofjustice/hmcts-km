@@ -140,7 +140,7 @@ function login_header( $title = 'Log In', $message = '', $wp_error = null ) {
 	 * @param string $login_header_title Login header logo title attribute.
 	 */
 	$login_header_title = apply_filters_deprecated(
-		'login_headertitle',
+		'login_headertext',
 		array( $login_header_title ),
 		'5.2.0',
 		'login_headertext',
