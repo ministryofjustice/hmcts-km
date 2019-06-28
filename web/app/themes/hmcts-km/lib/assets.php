@@ -178,6 +178,6 @@ function google_analytics()
     <?php
 }
 
-if (GOOGLE_ANALYTICS_ID) {
+if ('GOOGLE_ANALYTICS_ID') {
     add_action('wp_footer', __NAMESPACE__ . '\\google_analytics', 20);
 }
