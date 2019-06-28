@@ -47,7 +47,7 @@
         "roots/soil": "3.0.3",
         "wpackagist-plugin/wp-nested-pages": "*",
         "wpackagist-plugin/breadcrumb-trail": "*",
-        "wpackagist-plugin/classic-editor": "1.3",
+        "wpackagist-plugin/classic-editor": "1.5",
         "ministryofjustice/wp-rewrite-media-to-s3": "^0.1.0",
         "wpackagist-plugin/menu-icons": "*",
         "wpackagist-plugin/google-analytics-dashboard-for-wp": "*"
