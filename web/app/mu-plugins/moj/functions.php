@@ -32,7 +32,7 @@ function acf_json_load_point($paths)
     unset($paths[0]);
 
     // append path
-    $paths[] = WPMU_PLUGIN_DIR . '/ppj/acf-json';
+    $paths[] = WPMU_PLUGIN_DIR . '/moj/acf-json';
 
     return $paths;
 }
