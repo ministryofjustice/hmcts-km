@@ -30,7 +30,7 @@ Anonymous users cannot view the website – users must login before seeing conte
 1. Clone this repo to your local machine.
 
     ```bash
-    git clone git@github.com:ministryofjustice/hmcts-km.git .
+    git clone git@github.com:ministryofjustice/hmcts-km.git
     rm -rf .git
     ```
 
