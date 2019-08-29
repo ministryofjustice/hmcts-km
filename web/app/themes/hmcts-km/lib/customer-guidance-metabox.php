@@ -6,7 +6,7 @@ namespace Roots\Sage\Metaboxs;
  * Register a meta box using a class.
  */
 
-class Custom_Public_Meta_Box {
+class Customer_Guidance_Meta_Box {
 
   /**
    * Constructor.
@@ -30,7 +30,7 @@ class Custom_Public_Meta_Box {
   public function add(){
     add_meta_box(
       'public-box',
-      __( 'Public Text', 'textdomain' ),
+      __( 'Customer guidance', 'textdomain' ),
       array( $this, 'display' ),
       ['post','page'],
       'advanced',
@@ -42,20 +42,18 @@ class Custom_Public_Meta_Box {
   // this renders the metabox to display on screen
   public function display($post){
 
-
-    $values = get_post_custom( $post->ID );
-    // Add nonce for security and authentication.
+      // Add nonce for security and authentication.
     wp_nonce_field( 'custom_nonce_action', 'custom_nonce' );
 
     $public_value = get_post_meta( $post->ID, '_public_editor', false );
 
     if (!empty( $public_value ) || !empty( $welsh_value )){
-      $public_text = $public_value[0];
+      $customer_guidance = $public_value[0];
     }else{
-      $public_text = '';
+      $customer_guidance = '';
     }
 
-    wp_editor( $public_text, '_public_editor' );
+    wp_editor( $customer_guidance, '_public_editor' );
 
   }
 
@@ -94,4 +92,4 @@ class Custom_Public_Meta_Box {
 
 }
 
-new Custom_Public_Meta_Box();
+new Customer_Guidance_Meta_Box();

@@ -24,7 +24,7 @@ $sage_includes = [
 	'lib/nav.php',                   // Custom nav modifications
 	'lib/Nav/Walkers/ButtonNavWalker.php', // Button Nav Walker class
 	'lib/Nav/Walkers/TreeNavWalker.php', // Tree Nav Walker class
-	'lib/public-metabox.php',        // Extra Metabox
+	'lib/customer-guidance-metabox.php',        // Metabox to display internal notes for customer guidance
 	'lib/security.php',
 	'lib/taxonomies.php',            // Configure post taxonomies
 	'lib/titles.php',                // Page titles
