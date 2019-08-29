@@ -35,7 +35,9 @@
                             'post_type' => 'post',
                             'posts_per_page' => -1,
                             'post_status' => 'publish',
-                            'category__in' => $categories
+                            'category__in' => $categories,
+                            'orderby' => 'modified',
+                            'order' => 'DESC'
                         )
                     );
 
