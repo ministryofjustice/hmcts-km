@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "02ca9bcc0c133c8db5e511dc06131fef",
+    "content-hash": "4819ca2a830723a56869f23da0cc704e",
     "packages": [
         {
             "name": "acf/advanced-custom-fields-pro",
@@ -450,15 +450,15 @@
         },
         {
             "name": "wpackagist-plugin/classic-editor",
-            "version": "1.3",
+            "version": "1.5",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/classic-editor/",
-                "reference": "tags/1.3"
+                "reference": "tags/1.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/classic-editor.1.3.zip"
+                "url": "https://downloads.wordpress.org/plugin/classic-editor.1.5.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
