@@ -118,22 +118,22 @@
         },
         {
             "name": "johnpbloch/wordpress",
-            "version": "5.2.2",
+            "version": "5.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress.git",
-                "reference": "597236f0e4126ef92611b904725fd4e60afdc1ac"
+                "reference": "e39361341439df042ace80ba9445b3e0acb87215"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/597236f0e4126ef92611b904725fd4e60afdc1ac",
-                "reference": "597236f0e4126ef92611b904725fd4e60afdc1ac",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/e39361341439df042ace80ba9445b3e0acb87215",
+                "reference": "e39361341439df042ace80ba9445b3e0acb87215",
                 "shasum": ""
             },
             "require": {
-                "johnpbloch/wordpress-core": "5.2.2",
+                "johnpbloch/wordpress-core": "5.2.3",
                 "johnpbloch/wordpress-core-installer": "^1.0",
-                "php": ">=5.3.2"
+                "php": ">=5.6.20"
             },
             "type": "package",
             "notification-url": "https://packagist.org/downloads/",
@@ -146,34 +146,34 @@
                     "homepage": "http://wordpress.org/about/"
                 }
             ],
-            "description": "WordPress is web software you can use to create a beautiful website or blog.",
+            "description": "WordPress is open source software you can use to create a beautiful website, blog, or app.",
             "homepage": "http://wordpress.org/",
             "keywords": [
                 "blog",
                 "cms",
                 "wordpress"
             ],
-            "time": "2019-06-18T17:58:03+00:00"
+            "time": "2019-09-05T01:17:14+00:00"
         },
         {
             "name": "johnpbloch/wordpress-core",
-            "version": "5.2.2",
+            "version": "5.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress-core.git",
-                "reference": "bbded8adf0ddd8cafdbd6e6605e0ee82d5c1dc8a"
+                "reference": "455a884ce96b042602d1eb04fdf2b8e003be0eef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress-core/zipball/bbded8adf0ddd8cafdbd6e6605e0ee82d5c1dc8a",
-                "reference": "bbded8adf0ddd8cafdbd6e6605e0ee82d5c1dc8a",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress-core/zipball/455a884ce96b042602d1eb04fdf2b8e003be0eef",
+                "reference": "455a884ce96b042602d1eb04fdf2b8e003be0eef",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.2"
+                "php": ">=5.6.20"
             },
             "provide": {
-                "wordpress/core-implementation": "5.2.2"
+                "wordpress/core-implementation": "5.2.3"
             },
             "type": "wordpress-core",
             "notification-url": "https://packagist.org/downloads/",
@@ -193,7 +193,7 @@
                 "cms",
                 "wordpress"
             ],
-            "time": "2019-06-18T17:57:57+00:00"
+            "time": "2019-09-05T01:17:09+00:00"
         },
         {
             "name": "johnpbloch/wordpress-core-installer",
@@ -246,10 +246,10 @@
         },
         {
             "name": "koodimonni-language/core-en_gb",
-            "version": "5.2.2",
+            "version": "5.2.3",
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/translation/core/5.2.2/en_GB.zip"
+                "url": "https://downloads.wordpress.org/translation/core/5.2.3/en_GB.zip"
             },
             "require": {
                 "koodimonni/composer-dropin-installer": ">=0.2.3"
@@ -2878,16 +2878,16 @@
         },
         {
             "name": "zendframework/zend-code",
-            "version": "3.3.1",
+            "version": "3.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-code.git",
-                "reference": "c21db169075c6ec4b342149f446e7b7b724f95eb"
+                "reference": "936fa7ad4d53897ea3e3eb41b5b760828246a20b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-code/zipball/c21db169075c6ec4b342149f446e7b7b724f95eb",
-                "reference": "c21db169075c6ec4b342149f446e7b7b724f95eb",
+                "url": "https://api.github.com/repos/zendframework/zend-code/zipball/936fa7ad4d53897ea3e3eb41b5b760828246a20b",
+                "reference": "936fa7ad4d53897ea3e3eb41b5b760828246a20b",
                 "shasum": ""
             },
             "require": {
@@ -2895,10 +2895,10 @@
                 "zendframework/zend-eventmanager": "^2.6 || ^3.0"
             },
             "require-dev": {
-                "doctrine/annotations": "~1.0",
+                "doctrine/annotations": "^1.0",
                 "ext-phar": "*",
-                "phpunit/phpunit": "^6.2.3",
-                "zendframework/zend-coding-standard": "^1.0.0",
+                "phpunit/phpunit": "^7.5.15",
+                "zendframework/zend-coding-standard": "^1.0",
                 "zendframework/zend-stdlib": "^2.7 || ^3.0"
             },
             "suggest": {
@@ -2921,13 +2921,13 @@
             "license": [
                 "BSD-3-Clause"
             ],
-            "description": "provides facilities to generate arbitrary code using an object oriented interface",
-            "homepage": "https://github.com/zendframework/zend-code",
+            "description": "Extensions to the PHP Reflection API, static code scanning, and code generation",
             "keywords": [
+                "ZendFramework",
                 "code",
-                "zf2"
+                "zf"
             ],
-            "time": "2018-08-13T20:36:59+00:00"
+            "time": "2019-08-31T14:14:34+00:00"
         },
         {
             "name": "zendframework/zend-eventmanager",
