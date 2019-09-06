@@ -30,7 +30,7 @@ class Customer_Guidance_Meta_Box {
   public function add(){
     add_meta_box(
       'public-box',
-      __( 'Customer guidance', 'textdomain' ),
+      __( 'Content for HMCTS use only', 'textdomain' ),
       array( $this, 'display' ),
       ['post','page'],
       'advanced',
