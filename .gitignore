@@ -1,11 +1,15 @@
 # PhpStorm
 .idea
 
+# MAC
+.DS_Store
+
 # Application
 web/app/languages
 web/app/plugins/*
 !web/app/plugins/.gitkeep
-web/app/mu-plugins/*
+web/app/mu-plugins/*/
+!web/app/mu-plugins/moj/
 !web/app/mu-plugins/.gitkeep
 web/app/upgrade
 web/app/uploads/*

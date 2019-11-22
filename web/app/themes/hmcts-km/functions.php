@@ -11,29 +11,29 @@
  * @link https://github.com/roots/sage/pull/1042
  */
 $sage_includes = [
-	'lib/utils.php',                 // Utility functions
-	'lib/Nav/Walkers/ButtonNavWalker.php', // Button Nav Walker class
-	'lib/Nav/Walkers/TreeNavWalker.php', // Tree Nav Walker class
-	'lib/init.php',                  // Initial theme setup and constants
-	'lib/wrapper.php',               // Theme wrapper class
+	'lib/assets.php',                // Scripts and stylesheets
+  'lib/change-password.php',       // Frontend 'change password' functionality
+	'lib/comments.php',              // Disable comments and pingbacks
 	'lib/conditional-tag-check.php', // ConditionalTagCheck class
 	'lib/config.php',                // Configuration
-	'lib/assets.php',                // Scripts and stylesheets
-	'lib/titles.php',                // Page titles
-	'lib/nav.php',                   // Custom nav modifications
-	'lib/gallery.php',               // Custom [gallery] modifications
+	'lib/emails.php',                // Restricts certain email domain registration
 	'lib/extras.php',                // Custom functions
-	'lib/comments.php',              // Disable comments and pingbacks
-	'lib/taxonomies.php',            // Configure post taxonomies
+	'lib/gallery.php',               // Custom [gallery] modifications
+	'lib/init.php',                  // Initial theme setup and constants
 	'lib/login.php',                 // Changes to login functionality
-	'lib/change-password.php',       // Frontend 'change password' functionality
-	'lib/public-metabox.php',        // Extra Metabox
-	'lib/welsh-metabox.php',         // Extra Metabox
+	'lib/nav.php',                   // Custom nav modifications
+	'lib/Nav/Walkers/ButtonNavWalker.php', // Button Nav Walker class
+	'lib/Nav/Walkers/TreeNavWalker.php', // Tree Nav Walker class
+	'lib/customer-guidance-metabox.php',        // Metabox to display internal notes for customer guidance
+	'lib/security.php',
+	'lib/taxonomies.php',            // Configure post taxonomies
+	'lib/titles.php',                // Page titles
+  'lib/uploads.php',               // Added to extend allowed file types in Media upload
 	'lib/users/author.php',          // Custom User Role Settings
 	'lib/users/editor.php',          // Custom User Role Settings
-	'lib/emails.php',                // Restricts certain email domain registration
-  'lib/security.php'
-
+  'lib/utils.php',                 // Utility functions
+	'lib/wrapper.php',               // Theme wrapper class
+	'lib/welsh-metabox.php'          // Extra Metabox
 ];
 
 foreach ( $sage_includes as $file ) {

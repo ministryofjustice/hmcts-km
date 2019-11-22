@@ -10,98 +10,54 @@ namespace Roots\Sage\Assets;
  *
  * Enqueue scripts in the following order:
  * 1. Latest jQuery via Google CDN (if enabled in config.php)
- * 2. /theme/dist/scripts/modernizr.js
- * 3. /theme/dist/scripts/main.js
+ * 2. /theme/dist/scripts/modernizr.min.js
+ * 3. /theme/dist/scripts/main.min.js
  *
  * Google Analytics is loaded after enqueued scripts if:
  * - An ID has been defined in config.php
  * - You're not logged in as an administrator
  */
 
-class JsonManifest
+/**
+ * This function uses Laravel Mix, in particular, the mix-manifest.json file.
+ * The manifest file is converted to an array and distributed using keys described as $handles
+ *
+ * @param $handle
+ * @return bool|string
+ */
+function moj_get_asset($handle)
 {
-    private $manifest;
+    $get_assets = file_get_contents(get_template_directory() . '/dist/mix-manifest.json');
+    $manifest = json_decode($get_assets, true);
 
-    public function __construct($manifest_path)
-    {
-        if (file_exists($manifest_path)) {
-            $this->manifest = json_decode(file_get_contents($manifest_path), true);
-        } else {
-            $this->manifest = [];
-        }
+    $assets = array(
+        'style' => '/dist' . $manifest['/styles/main.css'],
+        'editor-style' => '/dist' . $manifest['/styles/editor-style.css'],
+        'js' => '/dist' . $manifest['/scripts/main.min.js'],
+        'js-modernizer' => '/dist' . $manifest['/scripts/modernizr.min.js'],
+        'js-g-jquery' => '//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js',
+        'js-jquery' => '/dist' . $manifest['/scripts/jquery.min.js'],
+
+    );
+
+    if (strpos($assets[$handle], '//') === 0) {
+        return $assets[$handle];
     }
 
-    public function get()
-    {
-        return $this->manifest;
+    // create the file system path for the file requested.
+    $file_system_path = get_template_directory() . strstr($assets[$handle], '?', true);
+
+    if (file_exists($file_system_path)) {
+        return get_template_directory_uri() . $assets[$handle];
     }
 
-    public function getPath($key = '', $default = null)
-    {
-        $collection = $this->manifest;
-        if (is_null($key)) {
-            return $collection;
-        }
-        if (isset($collection[$key])) {
-            return $collection[$key];
-        }
-        foreach (explode('.', $key) as $segment) {
-            if (!isset($collection[$segment])) {
-                return $default;
-            } else {
-                $collection = $collection[$segment];
-            }
-        }
-        return $collection;
-    }
+    return false;
 }
 
-function asset_path($filename)
-{
-    $dist_path = get_template_directory_uri() . DIST_DIR;
-    $directory = dirname($filename) . '/';
-    $file = basename($filename);
-    static $manifest;
-
-    if (empty($manifest)) {
-        $manifest_path = get_template_directory() . DIST_DIR . 'assets.json';
-        $manifest = new JsonManifest($manifest_path);
-    }
-
-    if (array_key_exists($file, $manifest->get())) {
-        return $dist_path . $directory . $manifest->get()[$file];
-    } else {
-        return $dist_path . $directory . $file;
-    }
-}
-
-function bower_map_to_cdn($dependency, $fallback)
-{
-    static $bower;
-
-    if (empty($bower)) {
-        $bower_path = get_template_directory() . '/bower.json';
-        $bower = new JsonManifest($bower_path);
-    }
-
-    $templates = [
-    'google' => '//ajax.googleapis.com/ajax/libs/%name%/%version%/%file%'
-    ];
-
-    $version = $bower->getPath('dependencies.' . $dependency['name']);
-
-    if (isset($version) && preg_match('/^(\d+\.){2}\d+$/', $version)) {
-        $search = ['%name%', '%version%', '%file%'];
-        $replace = [$dependency['name'], $version, $dependency['file']];
-        return str_replace($search, $replace, $templates[$dependency['cdn']]);
-    } else {
-        return $fallback;
-    }
-}
 
 function assets()
 {
-    wp_enqueue_style('sage_css', asset_path('styles/main.css'), false, null);
+    wp_enqueue_style('sage_css', moj_get_asset('style'), false, null);
 
   /**
    * Grab Google CDN's latest jQuery with a protocol relative URL; fallback to local if offline
@@ -112,11 +68,7 @@ function assets()
     if (!is_admin() && current_theme_supports('jquery-cdn')) {
         wp_deregister_script('jquery');
 
-        wp_register_script('jquery', bower_map_to_cdn([
-        'name' => 'jquery',
-        'cdn' => 'google',
-        'file' => 'jquery.min.js'
-        ], asset_path('scripts/jquery.js')), [], null, true);
+        wp_register_script('jquery', moj_get_asset('js-g-jquery'), [], null, true);
 
         add_filter('script_loader_src', __NAMESPACE__ . '\\jquery_local_fallback', 10, 2);
     }
@@ -125,9 +77,9 @@ function assets()
         wp_enqueue_script('comment-reply');
     }
 
-    wp_enqueue_script('modernizr', asset_path('scripts/modernizr.js'), [], null, true);
+    wp_enqueue_script('modernizr', moj_get_asset('js-modernizer'), [], null, true);
     wp_enqueue_script('jquery');
-    wp_enqueue_script('sage_js', asset_path('scripts/main.js'), [], null, true);
+    wp_enqueue_script('sage_js', moj_get_asset('js'), [], null, true);
 
     wp_localize_script('sage_js', 'SageJS', array('ajaxurl' => admin_url('admin-ajax.php')));
 }
@@ -144,7 +96,7 @@ function jquery_local_fallback($src, $handle = null)
     }
 
     if ($handle === 'jquery') {
-        $add_jquery_fallback = apply_filters('script_loader_src', asset_path('scripts/jquery.js'), 'jquery-fallback');
+        $add_jquery_fallback = apply_filters('script_loader_src', moj_get_asset('js-jquery'), 'jquery-fallback');
     }
 
     return $src;
@@ -178,6 +130,6 @@ function google_analytics()
     <?php
 }
 
-if (GOOGLE_ANALYTICS_ID) {
+if ('GOOGLE_ANALYTICS_ID') {
     add_action('wp_footer', __NAMESPACE__ . '\\google_analytics', 20);
 }

@@ -104,7 +104,7 @@ function login_header_link_title()
 {
     return 'HMCTS Knowledge Management CMS';
 }
-add_filter('login_headertitle', __NAMESPACE__ . '\\login_header_link_title');
+add_filter('login_headertext', __NAMESPACE__ . '\\login_header_link_title');
 
 /**
  * Require users to be logged in before seeing the site

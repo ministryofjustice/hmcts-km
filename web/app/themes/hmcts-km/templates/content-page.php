@@ -27,20 +27,20 @@ if ( ! empty( $public_value ) || ! empty( $welsh_value ) ) {
 		</div>
 		<div class="entry-content">
 				<?php
-				if ( ! empty( $public_text ) ) {
-					echo '<div class="app-contact-panel public">';
-						echo '<h1>Guidance for your customers</h1>';
-						echo '<p>' . $public_text . '</p>';
+                if ( ! empty( $public_text ) ) {
+                    echo '<div class="app-contact-panel public">';
+                    echo '<h3>Content for HMCTS use only – do not share publicly</h3>';
+                    echo '<p>' . $public_text . '</p>';
 
-					if ( ! empty( $welsh_text ) ) {
-						echo '<a data-toggle="collapse" data-target="#welsh" class="btn-hidden_panel" >View this in Welsh</a>';
-						echo '<div id="welsh" class="collapse app-contact-panel welsh">';
-							echo $welsh_text;
-						echo '</div>';
-					}
+                    if ( ! empty( $welsh_text ) ) {
+                        echo '<a data-toggle="collapse" data-target="#welsh" class="btn-hidden_panel" >View this in Welsh</a>';
+                        echo '<div id="welsh" class="collapse app-contact-panel welsh">';
+                        echo $welsh_text;
+                        echo '</div>';
+                    }
 
-					echo '</div>';
-				}
+                    echo '</div>';
+                }
 				?>
 		   </div>
 		<footer>

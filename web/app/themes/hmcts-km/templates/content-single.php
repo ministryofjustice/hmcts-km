@@ -29,7 +29,7 @@ if ( ! empty( $public_value ) || ! empty( $welsh_value ) ) {
 			<?php
 			if ( ! empty( $public_text ) ) {
 				echo '<div class="app-contact-panel public">';
-					echo '<h1>Guidance for your customers</h1>';
+					echo '<h3>Content for HMCTS use only – do not share publicly</h3>';
 					echo '<p>' . $public_text . '</p>';
 
 				if ( ! empty( $welsh_text ) ) {
