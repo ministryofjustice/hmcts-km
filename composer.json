@@ -44,7 +44,6 @@
     "vlucas/phpdotenv": "~1.0.9",
     "johnpbloch/wordpress": "*",
     "koodimonni-language/core-en_gb": "*",
-    "roots/soil": "3.0.3",
     "acf/advanced-custom-fields-pro": "*",
     "wpackagist-plugin/wp-nested-pages": "*",
     "wpackagist-plugin/breadcrumb-trail": "*",

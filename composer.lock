@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "241d3f7966844a63558228fbea48b968",
+    "content-hash": "9458a0f667aa07331a552be0be4a407c",
     "packages": [
         {
             "name": "acf/advanced-custom-fields-pro",
@@ -430,48 +430,6 @@
                 "issues": "https://github.com/ministryofjustice/wp-user-roles/issues"
             },
             "time": "2019-07-01T17:37:43+00:00"
-        },
-        {
-            "name": "roots/soil",
-            "version": "3.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/roots/soil.git",
-                "reference": "f4cb5aff4a781b1e739eb4f019eaaf11694635a9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/roots/soil/zipball/f4cb5aff4a781b1e739eb4f019eaaf11694635a9",
-                "reference": "f4cb5aff4a781b1e739eb4f019eaaf11694635a9",
-                "shasum": ""
-            },
-            "require": {
-                "composer/installers": "~1.0",
-                "php": ">=5.3.0"
-            },
-            "type": "wordpress-plugin",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Scott Walkinshaw",
-                    "email": "scott.walkinshaw@gmail.com",
-                    "homepage": "https://github.com/swalkinshaw"
-                },
-                {
-                    "name": "Ben Word",
-                    "email": "ben@benword.com",
-                    "homepage": "https://github.com/retlehs"
-                }
-            ],
-            "description": "Clean up WordPress markup, relative URLs, nice search",
-            "homepage": "http://roots.io/plugins/soil/",
-            "keywords": [
-                "wordpress"
-            ],
-            "time": "2015-01-24T16:42:29+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
