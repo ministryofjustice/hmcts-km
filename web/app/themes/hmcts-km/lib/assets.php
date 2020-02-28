@@ -27,7 +27,7 @@ namespace Roots\Sage\Assets;
  */
 function moj_get_asset($handle)
 {
-    $get_assets = file_get_contents(get_template_directory() . '/dist/mix-manifest.json');
+    $get_assets = file_get_contents(get_template_directory() . '/dist/mix-manifest.json', false);
     $manifest = json_decode($get_assets, true);
 
     $assets = array(
