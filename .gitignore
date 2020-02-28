@@ -5,7 +5,6 @@
 .DS_Store
 
 # Application
-web/.well-known/security.txt
 web/app/languages
 web/app/plugins/*
 !web/app/plugins/.gitkeep
@@ -16,6 +15,7 @@ web/app/upgrade
 web/app/uploads/*
 !web/app/uploads/.gitkeep
 web/app/db.php
+web/.well-known/security.txt
 
 # WordPress
 web/wp
