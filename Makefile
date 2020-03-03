@@ -15,23 +15,15 @@ deep-clean:
 
 # Run the application
 run:
-	dory up
 	docker-compose up
 
 # Open a bash shell on the running container
 bash:
 	docker-compose exec wordpress bash
 
-# from within docker; run a db import on the first .sql file found in the current directory and add an admin user
-db:
-	bin/local-db-import.sh
-
 # Run tests
 test:
 	composer test
-
-behat:
-	vendor/bin/behat
 
 down:
 	dory down
