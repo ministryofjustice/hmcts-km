@@ -18,10 +18,6 @@ add_theme_support('breadcrumb-trail');      // Enable to load jQuery from the Go
 /**
  * Configuration values
  */
-if (!defined('GOOGLE_ANALYTICS_ID')) {
-  // Format: UA-XXXXX-Y (Note: Universal Analytics only)
-    define('GOOGLE_ANALYTICS_ID', '');
-}
 
 if (!defined('WP_ENV')) {
   // Fallback if WP_ENV isn't defined in your WordPress config
