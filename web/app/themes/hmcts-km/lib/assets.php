@@ -55,7 +55,6 @@ function moj_get_asset($handle)
     return false;
 }
 
-
 function assets()
 {
     wp_enqueue_style('sage_css', moj_get_asset('style'), false, null);
@@ -81,7 +80,6 @@ function assets()
     wp_enqueue_script('modernizr', moj_get_asset('js-modernizer'), [], null, true);
     wp_enqueue_script('jquery');
     wp_enqueue_script('sage_js', moj_get_asset('js'), [], null, true);
-
     wp_enqueue_script('jj-gtm', moj_get_asset('jj-gtm'), array('jquery'));
 
     wp_localize_script('sage_js', 'SageJS', array('ajaxurl' => admin_url('admin-ajax.php')));
@@ -94,7 +92,7 @@ function jquery_local_fallback($src, $handle = null)
     static $add_jquery_fallback = false;
 
     if ($add_jquery_fallback) {
-        echo '<script>window.jQuery || document.write(\'<script src="' . $add_jquery_fallback .'"><\/script>\')</script>' . "\n";
+        echo '<script>window.jQuery || document.write(\'<script src="' . $add_jquery_fallback . '"><\/script>\')</script>' . "\n";
         $add_jquery_fallback = false;
     }
 
