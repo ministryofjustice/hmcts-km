@@ -34,6 +34,7 @@ function moj_get_asset($handle)
         'style' => '/dist' . $manifest['/styles/main.css'],
         'editor-style' => '/dist' . $manifest['/styles/editor-style.css'],
         'js' => '/dist' . $manifest['/scripts/main.min.js'],
+        'jj-gtm' => '/dist' . $manifest['/scripts/jj-gtm.js'],
         'js-modernizer' => '/dist' . $manifest['/scripts/modernizr.min.js'],
         'js-g-jquery' => '//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js',
         'js-jquery' => '/dist' . $manifest['/scripts/jquery.min.js'],
@@ -80,6 +81,8 @@ function assets()
     wp_enqueue_script('modernizr', moj_get_asset('js-modernizer'), [], null, true);
     wp_enqueue_script('jquery');
     wp_enqueue_script('sage_js', moj_get_asset('js'), [], null, true);
+
+    wp_enqueue_script('jj-gtm', moj_get_asset('jj-gtm'), array('jquery'));
 
     wp_localize_script('sage_js', 'SageJS', array('ajaxurl' => admin_url('admin-ajax.php')));
 }
