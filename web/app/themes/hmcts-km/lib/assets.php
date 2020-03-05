@@ -86,6 +86,21 @@ function assets()
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
 
+
+/**
+ * Enqueue a script in the WordPress admin
+ *
+ * @param int $hook Hook suffix
+ */
+function enqueue_admin_script()
+{
+    // Track backend editors - they have asked for it to better understand editor behaviour
+    wp_enqueue_script('jj-gtm', moj_get_asset('jj-gtm'), array('jquery'));
+}
+
+add_action('admin_enqueue_scripts', __NAMESPACE__ . '\\enqueue_admin_script', 10);
+
+
 // http://wordpress.stackexchange.com/a/12450
 function jquery_local_fallback($src, $handle = null)
 {
