@@ -1,7 +1,5 @@
 <?php
 
-use Dotenv\Dotenv;
-
 $root_dir = dirname(__DIR__);
 $webroot_dir = $root_dir . '/web';
 
