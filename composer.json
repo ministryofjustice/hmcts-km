@@ -54,6 +54,7 @@
     "ministryofjustice/wp-rewrite-media-to-s3": "^0.1.0",
     "wpackagist-plugin/menu-icons": "*",
     "wpackagist-plugin/wp-analytify":"*",
+    "wpackagist-plugin/wp-maintenance-mode": "*",
     "wpackagist-plugin/analytify-analytics-dashboard-widget":"*",
     "ministryofjustice/wp-moj-components": "*",
     "ministryofjustice/wp-user-roles": "*"
