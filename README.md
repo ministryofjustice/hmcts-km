@@ -1,5 +1,7 @@
 # HMCTS Knowledge Management (KM) website
 
+This site has been decommissioned as of 20.04.22 and is no longer in use.
+
 This is a WordPress project used by HMCTS for HMCTS staff.
 
 This website is used by HMCTS call centre staff as a reference manual to support them in their role.
